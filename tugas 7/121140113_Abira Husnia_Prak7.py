@@ -2,7 +2,7 @@ import tkinter as tk
 from tkinter import messagebox
 import random
 
-class RockPaperScissorsGame:
+class SuitJepang:
     def __init__(self, root):
         self.root = root
         self.root.title("Suit Jepang")
@@ -37,7 +37,7 @@ class RockPaperScissorsGame:
         result = self.get_result(player_choice, computer_choice)
         self.update_score(result)
         
-        message = f"Pilihan Kamu {player_choice}. Pilihan Komputer {computer_choice}.\n{result}"
+        message = f"Pilihan Kamu : {player_choice}.\nPilihan Komputer : {computer_choice}.\n{result}"
         messagebox.showinfo("Hasil", message)
         
     def get_result(self, player_choice, computer_choice):
@@ -68,5 +68,5 @@ class RockPaperScissorsGame:
             messagebox.showerror("Error", "Gagal untuk menyimpan skor.")
         
 root = tk.Tk()
-app = RockPaperScissorsGame(root)
+app = SuitJepang(root)
 root.mainloop()
